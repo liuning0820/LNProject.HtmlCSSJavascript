@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+  <script type="text/javascript" src="js.cookie.js">
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+  Cookies.set('dog', 'wangwang', { expires: 7, path: '' });
+  Cookies.set('cat', 'miaomiao', { expires: 7, path: '' });
+  console.log(Cookies.get('dog'));
+  console.log(Cookies.get());
+  Cookies.remove('dog') //fail to delete a cookie valid to the path of the current page.
+  Cookies.remove('dog', { path: '' });
+  console.log(Cookies.get());
+  </script>
+</body>
+</html>
