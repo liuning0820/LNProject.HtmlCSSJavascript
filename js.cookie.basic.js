@@ -21,7 +21,7 @@ function GetCookie (name) {
 			return getCookieVal (i);
 			}
 		i = document.cookie.indexOf(" ", i) + 1;
-		if (i == 0) break;
+		if (i === 0) break;
 		}
 	return null;
 	}

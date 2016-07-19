@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML 5 Web Storage Example</title>
+    
+    <script type="text/javascript" src="web.storage.js">
+    </script>
+    <link href="./web.storage.css" rel="stylesheet" type="text/css" />
+    <!--<style type="text/css">
+        .input {
+            width: 300px;
+        }
+        
+        .container {
+            width: 800px;
+            height: 25px;
+            display: inline-block;
+            margin: 2px;
+            border: 2px solid;
+        }
+
+    h1 {color: red;}
+    </style>-->
+    
+    <meta charset="utf-8">
+    
+</head>
+
+<body>
+    
+    <!--<h1 style="color:red"> Html 5 Web Storage sample</h1> -->
+    <h1 > Html 5 Web Storage sample</h1>
+    <p ><a href="http://www.w3schools.com/html/html5_webstorage.asp">html 5 web storage</a>|<a href="mailto:liuning0820@gmail.com">Email me</a></p>
+    <a href="#bottom">Go to end</a>
+    <div>
+        <div class="container" style="height:100px;" >
+            <p><strong>Refresh</strong> the page and check the storages</p>
+            <p><strong>Close</strong> the window and open it again and check the storages.</p>
+        </div>
+        <div class="container">
+            ID
+            <input type="text" id="txtId" class="input" /> Value
+            <input type="text" id="txtValue" class="input" />
+        </div>
+
+        <div class="container">
+            <input type="button" value="Save - Session Storage" class="input" onclick="insertToSessionStorage(document.getElementById('txtId').value, document.getElementById('txtValue').value)"
+            />
+            <input type="button" value="Save - Local Storage" class="input" onclick="insertToLocalStorage(document.getElementById('txtId').value, document.getElementById('txtValue').value)"
+            />
+        </div>
+
+        <div class="container">
+            <input type="button" value="Get - Session Storage" class="input" onclick="getAllFromSessionStorage()" />
+            <input type="button" value="Get - Local Storage" class="input" onclick="getAllFromLocalStorage()" />
+        </div>
+
+        <div class="container">
+            <input type="button" value="Clear Storage" class="input" onclick="clearStorage()" />
+        </div>
+        
+    </div>
+    
+    <p  class="special">this is some thing happen here to demo the class selector.</p>
+    
+<div class="special">
+    <ui>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ui>
+    
+        <ui>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ui>
+    
+        <ui>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ui>
+    
+        <ui>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ui>
+    
+    
+        <ui>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ui>
+    </div>
+    <h2 id="bottom">The bottom</h2>
+</body>
+
+</html>

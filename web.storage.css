@@ -1,0 +1,36 @@
+/*class selector*/
+.input {
+            width: 300px;
+        }
+        
+        .container {
+            width: 800px;
+            height: 25px;
+            display: inline-block;
+            margin: 2px;
+            border: 2px solid;
+        }
+
+.special {
+   color: blue;
+}
+
+div.special {
+   color: green;
+}
+
+/*id selector*/
+/*prefer to use class seletor to id selector to reuse the code?*/
+#special {
+    color: red;
+}
+
+/*element selector*/
+h1 {color: red;}
+
+/*grouping element split by , will apply the same rule.*/
+/*this can reduce css code.*/
+
+h2, h3 {
+    color: green;
+}
