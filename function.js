@@ -29,7 +29,7 @@ if (abs(3.5) == 3.5) {
 
 'use strict';
 function area_of_circle(ri, pi) {
-    if (pi === null) {
+    if (pi === null || pi ===undefined) {
         pi = 3.14;
     }
     return ri * ri * pi;
@@ -49,5 +49,18 @@ if (area_of_circle(2, 3.1416) === 12.5664) {
     console.log("Fail");
 }
 
+'use strict'
+var add = function (a,b) {
+    return a + b;
+
+};
+
+
+// unit test
+if(add(3,4)===7){
+    console.log("add function test pass");
+}else{
+    console.error("add function test fail");
+}
 
 
