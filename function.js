@@ -63,6 +63,9 @@ if(add(3,4)===7){
     console.error("add function test fail");
 }
 
+var sum = add.apply(null,[3,4]);
+console.log(sum);
+
 
 // The Method Invocation Pattern
 var myObject ={
@@ -79,7 +82,28 @@ console.log(myObject.value);//1
 myObject.increment(2);
 console.log(myObject.value);//3
 
+//The Function Invocation Pattern
+myObject.double = function(){
+    var that = this;//解决this 此时被绑定到全局范围的问题
 
+    var helper = function(){
+        that.value = that.value+ that.value;        
+    };
+
+    helper(); //以函数方式调用
+}
+
+//以函数方式调用
+myObject.double();
+console.log(myObject.value); //6
+
+//The Apply Invocation Pattern
+var anotherObject={
+    value:99,
+};
+
+myObject.increment.apply(anotherObject,anotherObject);
+console.log(anotherObject.value);
 
 
 
