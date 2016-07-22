@@ -64,3 +64,22 @@ if(add(3,4)===7){
 }
 
 
+// The Method Invocation Pattern
+var myObject ={
+    value: 0,
+    increment: function(inc){
+        //方法可以使用this访问自己所属对象的属性
+        this.value+= (typeof inc ==='number' ? inc:1);
+    }
+}
+
+// unit test
+myObject.increment();
+console.log(myObject.value);//1
+myObject.increment(2);
+console.log(myObject.value);//3
+
+
+
+
+
