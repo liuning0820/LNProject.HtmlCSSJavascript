@@ -105,5 +105,107 @@ var anotherObject={
 myObject.increment.apply(anotherObject,anotherObject);
 console.log(anotherObject.value);
 
+//参数arguments
+var sum= function(){
+    var i=0;
+    var sum =0;
 
+    for(i=0;i<arguments.length;i+=1){
+        sum+=arguments[i];
+    }
+    return sum;
+};
+
+console.log(sum(1,2,3,4,5,6,7,8,9));
+
+
+//Exception Handling
+var add= function(a,b){
+    if(typeof a !=='number'|| typeof b !=='number'){
+        throw{
+            name:'TypeError',
+            message:'add need number'
+        };
+    }
+    return a+b;
+}
+
+var try_it =function(){
+    try{
+        add("seven");
+    }catch(e){
+        console.log(e.name+': '+e.message);
+    }
+
+}
+
+try_it();
+
+
+//Closures
+function getFun(){
+    var a=7;
+    return function(b){
+        console.log(a+b);
+    }
+}
+
+var f=getFun();
+f(5); //12
+
+
+
+
+//recurrence 递归
+
+var hanio = function(disk, src,aux,dst){
+    if(disk>0){
+        hanio(disk-1,src,dst,aux);
+        console.log('Move disc '+ disk+'from '+src+'to '+dst);
+        hanio(disk-1, aux,src,dst);
+    }
+}
+
+hanio(3,'源','辅助','目的地');
+
+
+math.random()
+
+
+
+//原型继承
+
+var myMammal= {
+    name : 'Herb the Mammal',
+    get_name : function(){
+        return this.name;
+    },
+    says: function(){
+        return this.saying ||'';
+    }
+
+};
+
+
+var myCat = Object.create(myMammal);
+
+myCat.name = 'Henrietta';
+myCat.saying='meow';
+myCat.purr= function(n){
+    var i,s='';
+    for(i=0;i<n;i+=1){
+        if(s){
+            s+='-';
+        }
+        s+='r';
+    }
+    return s;
+
+};
+
+myCat.get_name= function(){
+    return this.says+' '+ this.name+' '+this.says;
+};
+
+console.log(myCat.purr(5));
 
